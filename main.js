@@ -80,7 +80,7 @@ if (emailInput && msg) {
     const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     msg.textContent = valid ? "✅ Valid Email" : "❌ Invalid Email";
   };
-
+  // Trigger validation on input change
   emailInput.addEventListener("input", function () {
     if (emailInput.value === "") {
       msg.textContent = "";
