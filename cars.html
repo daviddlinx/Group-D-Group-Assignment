@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ShiftX</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="nav__logo">
+            <img src="assets/logo-light.png" alt="logo" class="logo-light" />
+            <img src="assets/logo-dark.png" alt="logo" class="logo-dark" />
+            ShiftX
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="#help">Help</a></li>
+        <li>
+          <button onclick="window.location.href='https:/apps.apple.com/'" class="btn">
+            <span><i class="ri-apple-fill"></i></span>
+            Download App
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="fleet__container" id="car">
+      <h3 class="section__subheader">ONLY THE BEST CARS</h3>
+      <h2 class="section__header">Our Vehicle Fleet</h2>
+      <p class="section__description">
+        Explore our exclusive collection of luxury vehicles, designed to offer unmatched comfort, style, and performance. From elegant sedans to powerful SUVs, our fleet is perfect for every occasion, ensuring a premium driving experience in London.
+      </p>
+      <div class="fleet__wrapper-1">
+        <div class="fleet__images">
+          <img src="assets/fleet-1.jpg" alt="fleet" />
+          <img src="assets/fleet-2.jpg" alt="fleet" />
+          <img src="assets/fleet-3.jpg" alt="fleet" />
+          <img src="assets/fleet-4.jpg" alt="fleet" />
+          <img src="assets/fleet-5.jpg" alt="fleet" />
+        </div>
+      </div>
+      <div class="fleet__wrapper-2">
+        <div class="fleet__images">
+          <img src="assets/fleet-6.jpg" alt="fleet" />
+          <img src="assets/fleet-7.jpg" alt="fleet" />
+          <img src="assets/fleet-8.jpg" alt="fleet" />
+          <img src="assets/fleet-9.jpg" alt="fleet" />
+          <img src="assets/fleet-10.jpg" alt="fleet" />
+          <img src="assets/fleet-11.jpg" alt="fleet" />
+          <img src="assets/fleet-12.jpg" alt="fleet" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <a href="#" class="footer__logo">
+            <img src="assets/logo-dark.png" alt="logo" />
+            ShiftX
+          </a>
+          <p class="section__description">
+            Experience the best of London with the elegance and reliability of Premium Car Rental.
+          </p>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="#help">Help</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Subscribe To News</h4>
+          <form action="/">
+            <input id="email" type="text" placeholder="Enter Your Email" />
+            <button type="button" onclick="check()" class="btn">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+          <p id="msg"></p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 ShiftX. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
