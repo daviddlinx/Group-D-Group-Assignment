@@ -415,3 +415,122 @@ header {
 @media (width > 1024px) {
   /* Only footer and header changes here */
 }
+
+/* ===========================
+   Cars/Fleet Section
+=========================== */
+.fleet__container {
+  padding-block: 5rem;
+}
+
+.fleet__container :is(.section__subheader, .section__header) {
+  padding-inline: 1rem;
+}
+
+.fleet__container .section__description {
+  max-width: 900px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  padding-inline: 1rem;
+}
+
+.fleet__wrapper-1 {
+  margin-bottom: 1rem;
+}
+
+.fleet__wrapper-1,
+.fleet__wrapper-2 {
+  overflow-x: hidden;
+}
+
+.fleet__images {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fleet__wrapper-1 .fleet__images {
+  animation: scroll-left 45s linear infinite;
+}
+
+.fleet__wrapper-2 .fleet__images {
+  animation: scroll-right 45s linear infinite;
+}
+
+.fleet__images img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fleet__wrapper-1 .fleet__images img {
+  max-width: 450px;
+}
+
+.fleet__wrapper-2 .fleet__images img {
+  max-width: 300px;
+}
+
+@keyframes scroll-left {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+/* ===========================
+   Features Section
+=========================== */
+.feature__grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.feature__card {
+  padding: 1rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.feature__card span {
+  display: inline-block;
+  padding: 5px 11px;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  border-radius: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature__card:nth-child(1) span {
+  background-color: #fef2f2;
+}
+
+.feature__card:nth-child(2) span {
+  background-color: #f0fdf4;
+}
+
+.feature__card:nth-child(3) span {
+  background-color: #eff6ff;
+}
+
+.feature__card:nth-child(4) span {
+  background-color: #fefce8;
+}
+
+.feature__card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
