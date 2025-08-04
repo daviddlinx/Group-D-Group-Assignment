@@ -312,6 +312,297 @@ header {
   text-align: center;
 }
 
+/* ===========================
+   Home/About Section
+=========================== */
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--text-dark);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav__logo .logo-light {
+  max-width: 35px;
+}
+
+.nav__logo .logo-dark {
+  display: none;
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--text-dark);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(100%);
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.nav__links a:hover {
+  color: var(--text-light);
+}
+
+header {
+  display: grid;
+  padding-top: 8rem;
+  overflow: hidden;
+}
+
+.header__image {
+  background-image: url("assets/header-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 50px 50px var(--white) inset;
+}
+
+.header__content {
+  padding-block: 2rem 5rem;
+  padding-inline: 1rem;
+}
+
+.header__content h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  line-height: 4rem;
+}
+
+.about__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.about__image img {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.about__content .section__description {
+  margin-block: 1rem;
+}
+
+.about__btn {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.banner__container {
+  background-color: var(--text-dark);
+  border-radius: 1.5rem;
+}
+
+.banner__container .section__header {
+  max-width: 700px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.banner__container .section__description {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.banner__btn {
+  display: flex;
+  justify-content: center;
+}
+
+.banner__btn .btn {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__logo img {
+  max-width: 35px;
+}
+
+.footer__col .section__description {
+  text-align: left;
+}
+
+.footer__links {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links a {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.footer__links a:hover {
+  color: var(--text-light);
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__col form {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.footer__col input {
+  width: 100%;
+  padding-inline: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: transparent;
+}
+
+.footer__col .btn {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  background-color: transparent;
+}
+.footer__bar {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* ===========================
+   Cars/Fleet Section
+=========================== */
+.fleet__container {
+  padding-block: 5rem;
+}
+
+.fleet__container :is(.section__subheader, .section__header) {
+  padding-inline: 1rem;
+}
+
+.fleet__container .section__description {
+  max-width: 900px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  padding-inline: 1rem;
+}
+
+.fleet__wrapper-1 {
+  margin-bottom: 1rem;
+}
+
+.fleet__wrapper-1,
+.fleet__wrapper-2 {
+  overflow-x: hidden;
+}
+
+.fleet__images {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fleet__wrapper-1 .fleet__images {
+  animation: scroll-left 45s linear infinite;
+}
+
+.fleet__wrapper-2 .fleet__images {
+  animation: scroll-right 45s linear infinite;
+}
+
+.fleet__images img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fleet__wrapper-1 .fleet__images img {
+  max-width: 450px;
+}
+
+.fleet__wrapper-2 .fleet__images img {
+  max-width: 300px;
+}
+
+@keyframes scroll-left {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
 
 /* ===========================
    Features Section
