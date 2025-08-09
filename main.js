@@ -88,3 +88,48 @@ if (emailInput && msg) {
     }
   });
 }
+
+// contact form
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('shiftxContactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('shiftxName').value.trim();
+            const email = document.getElementById('shiftxEmail').value.trim();
+            const subject = document.getElementById('shiftxSubject').value;
+            const message = document.getElementById('shiftxMessage').value.trim();
+            const successMessage = document.getElementById('shiftxSuccessMessage');
+            
+            // Validate form
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Show success message
+            successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            successMessage.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+            
+            console.log('Form submitted:', { name, email, subject, message });
+        });
+    }
+});
