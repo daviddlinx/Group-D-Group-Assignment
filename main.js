@@ -51,12 +51,12 @@ ScrollReveal().reveal(".about__content .section__header", {
 });
 ScrollReveal().reveal(".about__content .section__description", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1000,
   interval: 500,
 });
 ScrollReveal().reveal(".about__btn", {
   ...scrollRevealOption,
-  delay: 2500,
+  delay: 1500,
 });
 
 ScrollReveal().reveal(".banner__container .section__header", {
