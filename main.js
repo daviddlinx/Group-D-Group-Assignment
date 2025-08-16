@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form values
             const name = document.getElementById('shiftxName').value.trim();
             const email = document.getElementById('shiftxEmail').value.trim();
-            const subject = document.getElementById('shiftxSubject').value;
+            const subject = document.getElementById('shiftxSubject').value.trim();
             const message = document.getElementById('shiftxMessage').value.trim();
             const successMessage = document.getElementById('shiftxSuccessMessage');
             
